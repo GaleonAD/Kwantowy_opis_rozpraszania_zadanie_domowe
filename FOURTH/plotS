@@ -1,0 +1,15 @@
+set term png
+set style data linespoints
+set out 'sig.png'
+set multiplot 
+set ytics nomirror
+#set logscale y
+#set xrange [0.001:0.6]
+set ylabel '{/Symbol s}_{tot} [fm^2]'
+set xlabel 'E [MeV]'
+jE = 0.05
+ja = 28.8*28.8
+plot 'test.log' u (jE*$1):($2*ja) w l lt -1 lw 2 t 'tot' ,'test.log' u ($1*jE):($3*ja) w l t '0',\
+	'test.log' u (jE*$1):($4*ja) w l t '1','test.log' u (jE*$1):($5*ja) w l t '2',\
+	'test.log' u ($1*jE):($6*ja) w l t '3','test.log' u (jE*$1):($7*ja) w l t '4',\
+	'test.log' u ($1*jE):($8*ja) w l t '5'#,'test.log' u (jE*$1):($9*ja) w l t '6'

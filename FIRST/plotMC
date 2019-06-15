@@ -1,0 +1,9 @@
+set term png
+set out 'sigma.png'
+set multiplot 
+set ytics nomirror
+set logscale x
+#set xrange [0.001:100]
+set ylabel 'sigma_{tot}'
+set xlabel 'E'
+plot 'test.log' u 1:2 w l t '', 1.73205

@@ -1,0 +1,9 @@
+set term png
+set out 'img2.png'
+set multiplot 
+set ytics nomirror
+set logscale x
+#set xrange [0.001:0.6]
+set ylabel 'sigma_{tot}'
+set xlabel 'E'
+plot 'data.2' u 1:2 w l t '' 

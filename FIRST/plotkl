@@ -1,0 +1,7 @@
+set term png
+set out 'sigma.png'
+set multiplot 
+set ytics nomirror
+set ylabel 'l_max'
+set xlabel 'k'
+plot 'test.log' u 3:4 w l t ''

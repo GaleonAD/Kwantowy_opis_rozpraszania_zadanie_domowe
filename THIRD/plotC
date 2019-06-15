@@ -1,0 +1,13 @@
+set term png
+set out 'sig.png'
+set multiplot 
+set ytics nomirror
+#set logscale x
+#set xrange [0.001:0.6]
+set ylabel '{/Symbol c}_{l} [pm^2]'
+set xlabel 'r [pm]'
+jE = 0.028
+ja = 1
+plot 'chi0' u (jE*$1):($2*ja) w l t '0' ,'chi1' u ($1*jE):($2*ja) w l t '1',\
+	'chi2' u (jE*$1):($4*ja) w l t '2','chi3' u (jE*$1):($5*ja) w l t '3',\
+	#'test.log' u ($1*jE):($6*ja) w l t '6','test.log' u (jE*$1):($7*ja) w l t '7'
